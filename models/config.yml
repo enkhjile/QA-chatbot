@@ -1,0 +1,20 @@
+model:
+  num_tokens: 32000
+  dim: 512
+  depth: 12
+  max_seq_len: 256
+  heads: 8
+  casual: True
+  return_embeddings: True
+  num_label: 2
+
+tokenizer:
+  max_len: 256
+  mecab_dict: /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd
+  vocab: ./models/mecab_vocab.txt
+
+predict:
+  n_best_size: 1
+  doc_stride: 64
+  max_query_length: 64
+  max_answer_length: 30
